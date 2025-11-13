@@ -16,4 +16,4 @@ inputs:
     required: true
 runs:
   using: 'node24'
-  main: 'dist/coolify-deploy.js'
+  main: 'dist/index.js'

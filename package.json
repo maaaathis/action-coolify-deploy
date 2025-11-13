@@ -6,7 +6,8 @@
 	"description": "Deploy Coolify apps using a GitHub Action",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "tsc"
+		"build": "ncc build src/coolify-deploy.ts -o dist",
+		"prepare": "npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +25,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^24.10.1",
+		"@vercel/ncc": "^0.38.4",
 		"mathisch": "^0.4.0",
 		"prettier": "^3.6.2",
 		"typescript": "^5.9.3"
