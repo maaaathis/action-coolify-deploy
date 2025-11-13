@@ -1,0 +1,19 @@
+name: 'Coolify - Deploy your Application'
+description: 'Deploy Coolify apps using a GitHub Action'
+branding:
+  icon: 'arrow-up'
+  color: 'purple'
+author: 'maaaathis'
+inputs:
+  coolify-url:
+    description: 'Coolify base url'
+    required: true
+  coolify-app-id:
+    description: 'Application ID'
+    required: true
+  coolify-token:
+    description: 'API Token'
+    required: true
+runs:
+  using: 'node24'
+  main: 'dist/coolify-deploy.js'
